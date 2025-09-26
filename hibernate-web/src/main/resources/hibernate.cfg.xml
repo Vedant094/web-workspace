@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="hibernate.connection.password">VEDANT@123</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hiberweb</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+		<!-- Hibernate Settings -->
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+
+		<!--XML Mapping File -->
+		<mapping resource="student.hbm.xml" />
+		<!-- Annotated Class -->
+		<mapping class="com.coforge.training.hibernateweb.model.Employee" />
+		<mapping class="com.coforge.training.hibernateweb.model.ShoppingCart" />
+		<mapping class="com.coforge.training.hibernateweb.model.User" />
+		<mapping class="com.coforge.training.hibernateweb.model.Account" />
+		<mapping class="com.coforge.training.hibernateweb.model.SavingsAccount" />
+		<mapping class="com.coforge.training.hibernateweb.model.CurrentAccount" />
+		
+	
+	</session-factory>
+</hibernate-configuration>
